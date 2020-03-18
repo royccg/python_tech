@@ -1,14 +1,17 @@
 <!-- TOC -->
 
 - [pyqt5的基础知识](#pyqt5%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
-  - [什么是Qt](#%E4%BB%80%E4%B9%88%E6%98%AFqt)
-  - [什么是pyQt](#%E4%BB%80%E4%B9%88%E6%98%AFpyqt)
-  - [讲解的内容](#%E8%AE%B2%E8%A7%A3%E7%9A%84%E5%86%85%E5%AE%B9)
+    - [什么是Qt](#%E4%BB%80%E4%B9%88%E6%98%AFqt)
+    - [什么是pyQt](#%E4%BB%80%E4%B9%88%E6%98%AFpyqt)
+    - [讲解的内容](#%E8%AE%B2%E8%A7%A3%E7%9A%84%E5%86%85%E5%AE%B9)
 - [搭建PyQt5开发环境](#%E6%90%AD%E5%BB%BApyqt5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
 - [开发第一个基于PyQt5的桌面应用](#%E5%BC%80%E5%8F%91%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Epyqt5%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8)
 - [安装和配置QtDesigner](#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEqtdesigner)
 - [将.ui文件生成.py文件](#%E5%B0%86ui%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90py%E6%96%87%E4%BB%B6)
-- [在QtDesigner中使用水平布局](#%E5%9C%A8qtdesigner%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B0%B4%E5%B9%B3%E5%B8%83%E5%B1%80)
+- [在QtDesigner中使用水平、垂直、网格、表单布局](#%E5%9C%A8qtdesigner%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E7%BD%91%E6%A0%BC%E8%A1%A8%E5%8D%95%E5%B8%83%E5%B1%80)
+- [尺寸策略（sizepolicy）](#%E5%B0%BA%E5%AF%B8%E7%AD%96%E7%95%A5sizepolicy)
+    - [sizeHint(期望尺寸)](#sizehint%E6%9C%9F%E6%9C%9B%E5%B0%BA%E5%AF%B8)
+    - [尺寸设置](#%E5%B0%BA%E5%AF%B8%E8%AE%BE%E7%BD%AE)
 
 <!-- /TOC -->
 
@@ -56,13 +59,18 @@ pyQt是一个用于创建GUI应用程序的跨平台的跨平台工具包，它�
     ```python
     self.pushButton.sizeHint().width()
     self.pushButton.sizeHint().height()
-    ```   
+    ```
   + 最小期望尺寸（minimumSizeHint）
     + 很多控件的 期望和最小期望尺寸是相同的
-    ```python
-    self.pushButton.minimunSizeHint().width()
-    self.pushButton.minimunSizeHint().height()
-    ```
+
+  ```python
+  self.pushButton.minimunSizeHint().width()
+  self.pushButton.minimunSizeHint().height()
+  ```
+
 ### 尺寸设置
 
-    
+# 设置控件之间的伙伴关系
+edit-setbuddied
+
+# 修改控件的Tab顺序
