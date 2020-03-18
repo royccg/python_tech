@@ -1,5 +1,5 @@
 import  sys
-import MainWinSizePolicy
+import MainWinBuddy
 
 from PyQt5.QtWidgets import QApplication,QMainWindow
 
@@ -10,7 +10,7 @@ if __name__ == '__main__':
     # 创建一个窗口
     mainWindow = QMainWindow()
     # 调用 demo中的ui
-    ui =  MainWinSizePolicy.Ui_MainWindow()
+    ui =  MainWinBuddy.Ui_MainWindow()
     # 调用 setupUi 的布局
     ui.setupUi(mainWindow)
     # 窗口显示
