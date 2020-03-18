@@ -47,3 +47,22 @@ pyQt是一个用于创建GUI应用程序的跨平台的跨平台工具包，它�
 
 # 在QtDesigner中使用水平、垂直、网格、表单布局
 构件在布局中是等分、等距的
+
+#  尺寸策略（sizepolicy）
+### sizeHint(期望尺寸)
+ + 在未设置控件的最大最小值时的，建议尺寸（默认尺寸）
+ + 对于大多数控件来说，sizeHint的值是可读的
+ + 读取期望尺寸
+    ```python
+    self.pushButton.sizeHint().width()
+    self.pushButton.sizeHint().height()
+    ```   
+  + 最小期望尺寸（minimumSizeHint）
+    + 很多控件的 期望和最小期望尺寸是相同的
+    ```python
+    self.pushButton.minimunSizeHint().width()
+    self.pushButton.minimunSizeHint().height()
+    ```
+### 尺寸设置
+
+    
