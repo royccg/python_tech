@@ -45,4 +45,5 @@ pyQt是一个用于创建GUI应用程序的跨平台的跨平台工具包，它�
 + python -m PyQt5.uic.pyuic demo.ui -o demo.py
 + pyuic5 demo.ui -o demo.py
 
-# 在QtDesigner中使用水平布局
+# 在QtDesigner中使用水平、垂直、网格、表单布局
+构件在布局中是等分、等距的
