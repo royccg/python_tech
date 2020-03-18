@@ -1,13 +1,17 @@
-<!-- MarkdownTOC -->
+<!-- TOC -->
 
-- pyqt5的基础知识
-    - 什么是Qt
-    - 什么是pyQt
-    - 讲解的内容
-- 搭建PyQt5开发环境
-- 开发第一个基于PyQt5的桌面应用
+- [pyqt5的基础知识](#pyqt5%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
+  - [什么是Qt](#%E4%BB%80%E4%B9%88%E6%98%AFqt)
+  - [什么是pyQt](#%E4%BB%80%E4%B9%88%E6%98%AFpyqt)
+  - [讲解的内容](#%E8%AE%B2%E8%A7%A3%E7%9A%84%E5%86%85%E5%AE%B9)
+- [搭建PyQt5开发环境](#%E6%90%AD%E5%BB%BApyqt5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
+- [开发第一个基于PyQt5的桌面应用](#%E5%BC%80%E5%8F%91%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Epyqt5%E7%9A%84%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8)
+- [安装和配置QtDesigner](#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEqtdesigner)
+- [将.ui文件生成.py文件](#%E5%B0%86ui%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90py%E6%96%87%E4%BB%B6)
+- [在QtDesigner中使用水平布局](#%E5%9C%A8qtdesigner%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%B0%B4%E5%B9%B3%E5%B8%83%E5%B1%80)
 
-<!-- /MarkdownTOC -->
+<!-- /TOC -->
+
 # pyqt5的基础知识
 ## 什么是Qt
 使用C++语言编写的跨平台GUI库，支持Window、MacOSx和linux。由于Qt使用C++语言编写，所以使用Qt开发的GUI程序的风格与当前操作系统完全相同，而且运行效率很高。
@@ -33,3 +37,12 @@ pyQt是一个用于创建GUI应用程序的跨平台的跨平台工具包，它�
 
 # 开发第一个基于PyQt5的桌面应用
 必须使用两个类 ：QApplication和QWiget。都在PyQt5.QtWidgets。
+
+# 安装和配置QtDesigner
+使用pycharm来整合 QtDesigner
+
+# 将.ui文件生成.py文件
++ python -m PyQt5.uic.pyuic demo.ui -o demo.py
++ pyuic5 demo.ui -o demo.py
+
+# 在QtDesigner中使用水平布局
