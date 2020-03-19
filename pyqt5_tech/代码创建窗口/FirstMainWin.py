@@ -21,8 +21,6 @@ class FirstMainWin(QMainWindow):
 
         self.status.showMessage("只存在5秒的消息",5000)
 
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     # 设置程序的图标
