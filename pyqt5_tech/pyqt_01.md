@@ -15,6 +15,7 @@
 - [设置控件之间的伙伴关系](#%E8%AE%BE%E7%BD%AE%E6%8E%A7%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%99%E4%BC%B4%E5%85%B3%E7%B3%BB)
 - [修改控件的Tab顺序](#%E4%BF%AE%E6%94%B9%E6%8E%A7%E4%BB%B6%E7%9A%84tab%E9%A1%BA%E5%BA%8F)
 - [在Qt Designer中设置信号槽](#%E5%9C%A8qt-designer%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%BF%A1%E5%8F%B7%E6%A7%BD)
+- [在QtDesigner中为窗口添加菜单和工具栏](#%E5%9C%A8qtdesigner%E4%B8%AD%E4%B8%BA%E7%AA%97%E5%8F%A3%E6%B7%BB%E5%8A%A0%E8%8F%9C%E5%8D%95%E5%92%8C%E5%B7%A5%E5%85%B7%E6%A0%8F)
 
 <!-- /TOC -->
 
