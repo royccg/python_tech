@@ -12,6 +12,9 @@
 - [尺寸策略（sizepolicy）](#%E5%B0%BA%E5%AF%B8%E7%AD%96%E7%95%A5sizepolicy)
     - [sizeHint(期望尺寸)](#sizehint%E6%9C%9F%E6%9C%9B%E5%B0%BA%E5%AF%B8)
     - [尺寸设置](#%E5%B0%BA%E5%AF%B8%E8%AE%BE%E7%BD%AE)
+- [设置控件之间的伙伴关系](#%E8%AE%BE%E7%BD%AE%E6%8E%A7%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%99%E4%BC%B4%E5%85%B3%E7%B3%BB)
+- [修改控件的Tab顺序](#%E4%BF%AE%E6%94%B9%E6%8E%A7%E4%BB%B6%E7%9A%84tab%E9%A1%BA%E5%BA%8F)
+- [在Qt Designer中设置信号槽](#%E5%9C%A8qt-designer%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%BF%A1%E5%8F%B7%E6%A7%BD)
 
 <!-- /TOC -->
 
@@ -74,3 +77,13 @@ pyQt是一个用于创建GUI应用程序的跨平台的跨平台工具包，它�
 edit-setbuddied
 
 # 修改控件的Tab顺序
+edit-编辑tab顺序
+
+# 在Qt Designer中设置信号槽
+ + Qt的核心机制，也是PyQt的核心机制
+     + 信号（signal）
+     +  槽(slot)
+ + 信号：是由对象或控件发送出去的消息。
+   - 按钮的单击事件（信号）
+   - 当单击按钮时，按钮就会向外部发送单击的消息。
+ + 这些发送出去的信号需要一些代码来拦截，这些代码就是<font color =red>槽</font>。
