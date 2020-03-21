@@ -1,6 +1,6 @@
-```
+'''
     mainLayout.addWidget(控件对象, rowIndex, columnIndex, row, column)
-```
+'''
 
 from PyQt5.QtWidgets import *
 import sys
