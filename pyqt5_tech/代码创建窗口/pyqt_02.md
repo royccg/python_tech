@@ -14,7 +14,9 @@
   - [QLindeEdit 控件与回显模式](#qlindeedit-控件与回显模式)
   - [QLineEdit控件的输入（校验器）](#qlineedit控件的输入校验器)
   - [用掩码限制QLineEdit控件的输入](#用掩码限制qlineedit控件的输入)
-  - [这是](#这是)
+  - [QLineEdit综合案例](#qlineedit综合案例)
+  - [QTextEdit控件输入多行文本](#qtextedit控件输入多行文本)
+  - [按钮控件（QPushButton）](#按钮控件qpushbutton)
 
 <!-- /code_chunk_output -->
 
@@ -92,9 +94,9 @@
 
 ## QLabel 与伙伴控件
 
-    ```Text
-    QLabelBuddy.py
-    ```
+```Text
+QLabelBuddy.py
+```
 
 ## QLindeEdit 控件与回显模式
  + 基本功能：输入单行的文本
@@ -131,4 +133,19 @@
     !  关闭大小写转换
     \  使用"\"转义上面列出的字符
 
-## 这是
+## QLineEdit综合案例
+
+```Text
+QLineEditDemo.py
+```
+
+## QTextEdit控件输入多行文本
+可以多行输入
+
+
+## 按钮控件（QPushButton）
++ QAbstractButoon
+    + QPushButton
+    + AToolButton
+    + QRadioButton
+    + QCheckBox
