@@ -143,9 +143,19 @@ QLineEditDemo.py
 可以多行输入
 
 
-## 按钮控件（QPushButton）
+## 按钮控件
 + QAbstractButoon
     + QPushButton
     + AToolButton
-    + QRadioButton
-    + QCheckBox
+    + QRadioButton（单选框控件）
+    + QCheckBox(复选框控件)
+        + 3种状态
+        + 未选中： 0
+        + 半选中： 1
+        + 选中：  2
+
+## 下拉列表控件
++ 如何将列表项添加到QComboBox控件中
++ 如何获取选中的列表项
+
+## 计数器控件（QSpinBox）
