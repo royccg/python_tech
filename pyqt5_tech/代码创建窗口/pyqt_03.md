@@ -85,3 +85,38 @@ painter.end()
 + QCalendarWidget
 
 ### 输入各种风格的日期和时间
++ 显示时间
++ 事件
+
+### 创建和使用菜单
++ 工具栏
+  - 工具栏默认按钮：只显示图标，将文本作为悬停提示
+  - 三种显示状态
+    - 只显示图标
+    - 只显示文本
+    - 显示图标和文本
+
+### 创建和使用状态栏
+
+
+### 使用打印机
++ 输入都是以图像的形式输出
+
+# 数据
+### 显示二维表数据
++ QTableView控件
+  - 数据源：Model
+  - 需要创建QTableView实例和一个数据源（Model），然后将两者关联
+  - MVC ：Model Viewer Controller
+    - MVC的目的是将后端的数据和前端的页面的耦合度降低
++ QTableWidget
+  - QTableView的扩展
+  - 每一个Cell（单元格）shi yige QTableWidgetItem
+
++ QListView控件
+  - 数据源Model
++ QListWidget
+  - QListView 支持非MVC模式
+
+
+### 在单元格中放置控件
