@@ -120,3 +120,46 @@ painter.end()
 
 
 ### 在单元格中放置控件
++ setCellWidget 将控件放到单元格中
++ setItem 将文本放入单元格中
++ QSS QtStyleSheet
+  - setStyleSheet:设置控件样式
+
+
+### 在表格中搜索Cell和行定位
++ 数据的定位： findItems
++ 如果找到满足条件的单元格，会定位到单元格所在的行
+  - setSliderPosition(row)
+
+### 设置单元格字体和颜色
++ 字体名称
++ 字号
++ 颜色
+
+
+### 按表格中的某一列排序
++ 按哪一列排序
++ 排序类型：升序或降序
++ sortItems(columnIndex, orderType)
+
+### 设置单元格文本的对齐方式
++ setTextAlignment
+  - Qt.AlignRight
+  - Qt.AlignBottom
+
+### 合并单元格
++ setSpan(row, col, 要合并的行数，要合并的列数)
+
+
+### 设置单元格的尺寸
++ setRowHeight(0, 100)
++ setColumnWidth(0, 150)
+
+### 实现单元格中图文混排
+
+```python
+newItem = QTableWidgetItem(QIcon('new.png'), '打开')
+```
+
+### 改变单元格中图片的尺寸
++ setIconSize(QSize(width, height))
