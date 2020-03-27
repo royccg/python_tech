@@ -30,6 +30,7 @@
     - [实现单元格中图文混排](#实现单元格中图文混排)
     - [改变单元格中图片的尺寸](#改变单元格中图片的尺寸)
     - [在表格中显示上下文菜单](#在表格中显示上下文菜单)
+    - [树控件（QTreeWidget）的基本用法](#树控件qtreewidget的基本用法)
 
 <!-- /code_chunk_output -->
 
@@ -174,7 +175,6 @@ painter.end()
 ### 合并单元格
 + setSpan(row, col, 要合并的行数，要合并的列数)
 
-
 ### 设置单元格的尺寸
 + setRowHeight(0, 100)
 + setColumnWidth(0, 150)
@@ -200,3 +200,6 @@ newItem = QTableWidgetItem(QIcon('new.png'), '打开')
 # 允许使用上下文菜单
 self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
 ```
+
+### 树控件（QTreeWidget）的基本用法
++ 添加响应事件
