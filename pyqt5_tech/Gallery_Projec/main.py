@@ -40,10 +40,12 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.imagePutTableWidget.horizontalHeader().setVisible(False)
         self.imagePutTableWidget.verticalHeader().setVisible(False)
         # 隐藏表格线
-        # self.imagePutTableWidget.setShowGrid(False)
+        self.imagePutTableWidget.setShowGrid(False)
 
         # 添加图片并展示在 中间窗口
-        self.loadImagePushButton.clicked.connect(lambda: self.loadImage(0, 0))
+
+        data = self.loadImagePushButton.clicked.connect(lambda: self.loadImage(0, 0))
+        print(type(data))
 
     def loadImage(self, rowIndex, columnIndex):
         # print('press importPicture')
@@ -55,7 +57,9 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.imagePutTableWidget.setItem(rowIndex, columnIndex, item)
         # print(fname)
         itemName = QTableWidgetItem(fname.split('/')[-1])
-        self.imagePutTableWidget.setItem(rowIndex+1, columnIndex,itemName)
+        itemName.setTextAlignment(Qt.AlignCenter)
+        self.imagePutTableWidget.setItem(rowIndex+1, columnIndex, itemName)
+        return fname
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

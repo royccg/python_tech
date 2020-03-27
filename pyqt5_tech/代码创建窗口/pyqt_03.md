@@ -163,3 +163,18 @@ newItem = QTableWidgetItem(QIcon('new.png'), '打开')
 
 ### 改变单元格中图片的尺寸
 + setIconSize(QSize(width, height))
+
+### 在表格中显示上下文菜单
++ 表格中 单击右键能出现菜单
++ QMenu.exec_
+1. 如何弹出菜单
+2. 如何在满足条件的情况下弹出菜单
+   1. 判断条件
+   2. 不满足就不成立
+
+
+```python
+# 允许使用上下文菜单
+self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
+
+```
