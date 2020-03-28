@@ -130,7 +130,7 @@ painter.end()
 ### 使用打印机
 + 输入都是以图像的形式输出
 
-# 数据
+# 数据 table控件
 ### 显示二维表数据
 + QTableView控件
   - 数据源：Model
@@ -203,3 +203,22 @@ self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
 
 ### 树控件（QTreeWidget）的基本用法
 + 添加响应事件
++ 添加、修改和删除树控件中的节点
+
+### QTreeView控件与系统定制模式
++ 使用model装载控件
+    + QDirModel
+
+# 容器控件
+### 选项卡控件QTabWidget
++ 多个页面
+
+### 堆栈窗口控件（QStackedWidget）
++ 多注意
+
+### 停靠控件（QDockWidget）
+可停靠到 上下左右的  区域的控件
+
+### 容纳多文档的窗口
++ QMdiArea
++ QMdiSubWindow
