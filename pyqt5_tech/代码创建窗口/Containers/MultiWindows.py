@@ -11,8 +11,9 @@ class MultiWindows(QMainWindow):
         self.setWindowTitle('容纳多文档的窗口')
 
         self.mdi = QMdiArea()
-        self.setCentralWidget(self.mdi)
         bar = self.menuBar()
+        self.setCentralWidget(self.mdi)
+
         file = bar.addMenu('File')
         file.addAction('New')
         file.addAction('cascade')
@@ -26,7 +27,7 @@ class MultiWindows(QMainWindow):
             MultiWindows.count= MultiWindows.count +1
             sub = QMdiSubWindow()
             sub.setWidget(QTextEdit())
-            sub.setWindowTitle('子窗口' + str(MultiWindow.count))
+            sub.setWindowTitle('子窗口' + str(MultiWindows.count))
             self.mdi.addSubWindow(sub)
             sub.show()
         elif q.text() == 'cascade':

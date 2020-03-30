@@ -18,7 +18,7 @@
     - [创建和使用菜单](#创建和使用菜单)
     - [创建和使用状态栏](#创建和使用状态栏)
     - [使用打印机](#使用打印机)
-- [数据](#数据)
+- [数据 table控件](#数据-table控件)
     - [显示二维表数据](#显示二维表数据)
     - [在单元格中放置控件](#在单元格中放置控件)
     - [在表格中搜索Cell和行定位](#在表格中搜索cell和行定位)
@@ -31,6 +31,15 @@
     - [改变单元格中图片的尺寸](#改变单元格中图片的尺寸)
     - [在表格中显示上下文菜单](#在表格中显示上下文菜单)
     - [树控件（QTreeWidget）的基本用法](#树控件qtreewidget的基本用法)
+    - [QTreeView控件与系统定制模式](#qtreeview控件与系统定制模式)
+- [容器控件](#容器控件)
+    - [选项卡控件QTabWidget](#选项卡控件qtabwidget)
+    - [堆栈窗口控件（QStackedWidget）](#堆栈窗口控件qstackedwidget)
+    - [停靠控件（QDockWidget）](#停靠控件qdockwidget)
+    - [容纳多文档的窗口](#容纳多文档的窗口)
+    - [滚动条控件](#滚动条控件)
+- [Multithread 多线程完成任务](#multithread-多线程完成任务)
+    - [动态显示当前时间](#动态显示当前时间)
 
 <!-- /code_chunk_output -->
 
@@ -222,3 +231,15 @@ self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
 ### 容纳多文档的窗口
 + QMdiArea
 + QMdiSubWindow
+
+### 滚动条控件
++ QScrollBar
+    + 通过滚动条值得变化控制其他控件状态的变化
+    + 通过滚动条值得变化控制控件的变化
+
+# Multithread 多线程完成任务
+### 动态显示当前时间
++ QTimer
++ QThread
++ 多线程：用于同时完成多个任务
++ 每隔一定时间  调动函数
