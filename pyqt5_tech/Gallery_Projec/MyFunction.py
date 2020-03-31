@@ -24,4 +24,11 @@ def readJson(fileDir):
 		return json.load(file)
 
 
+def numQue(num):
+	if num%2 == 0 :
+		return 2*num-2
+	else:
+		return 2*num-1
+
+
 
