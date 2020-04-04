@@ -61,7 +61,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.imageInfTableWidget.setRowCount(0)
         self.imageInfTableWidget.setColumnCount(14) # 暂定14行 信息
         self.tableHorizontalHeaderLabel = ['id', '项目编号', '项目名称', '文件名', '项目类型', '桥梁类型1', '桥梁类型2',
-                                                                        '材料类型', '桥梁风格', '桥梁规模', '桥梁跨径', '建成状态','文件本机地址','文件指向储存地址']
+        '材料类型', '桥梁风格', '桥梁规模', '桥梁跨径', '建成状态','文件本机地址','文件指向储存地址']
         self.imageInfTableWidget.setHorizontalHeaderLabels(self.tableHorizontalHeaderLabel)
         # self.imageInfTableWidget.setColumnHidden(0, True)   # 隐藏列  id  文件本机地址  指向存储地址
         # self.imageInfTableWidget.setColumnHidden(12, True)
@@ -118,7 +118,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
             print('error,读取当前展示框的图片数量失败')
             self.statusBar.showMessage('Error: 读取当前展示框的图片数量失败')
         # '''
-        # 
+        #
         if signal == 1:
             import math
             imageAftRow = math.ceil((imageNowRow/2 -1 +len(fnames))/2)*2
@@ -140,7 +140,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         # 设置 imagePutWidget
         # 设定 fnameRow 行2列
         self.imagePutTableWidget.setRowCount(imageAftRow)
-        self.imagePutTableWidget.setColumnCount(2) 
+        self.imagePutTableWidget.setColumnCount(2)
         # 设定图片的尺寸
         self.imagePutTableWidget.setIconSize(QSize(250, 200))  #尺寸可能后面调动
         # 设定单元格的尺寸
@@ -227,7 +227,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
 
         # 清空掉 imageInf   imagePut
         self.imageInfTableWidget.setRowCount(0)
-        self.imageInfTableWidget.setColumnCount(12) 
+        self.imageInfTableWidget.setColumnCount(12)
         self.imagePutTableWidget.setRowCount(0)
         self.imagePutTableWidget.setColumnCount(0)
 

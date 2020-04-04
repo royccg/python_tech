@@ -219,7 +219,7 @@
 			"file": "/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/contents/chp09.tex",
 			"settings":
 			{
-				"buffer_size": 5446,
+				"buffer_size": 4869,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -451,9 +451,6 @@
 	],
 	"file_history":
 	[
-		"/C/Users/tjad/Desktop/acad.pgp",
-		"/C/Users/tjad/Desktop/tex_pytex/full example/full_exp.py",
-		"/E/BaiduNetdiskDownload/cad2021zwpj_166379/使用前说明.txt",
 		"/E/陈春光/blog/royccg.github.io/themes/archer/_config.yml",
 		"/E/陈春光/blog/royccg.github.io/source/_posts/【电影】【国漫】哪吒之魔童降世.md",
 		"/E/陈春光/blog/royccg.github.io/themes/archer/layout/_partial/comment/custom.ejs",
@@ -578,7 +575,10 @@
 		"/E/陈春光/2019年/08 山东菏泽环堤河项目/07 收资-计算文件/计算书/01 整理计算书文件 20200114/J 计算文件/八一西路/01 下部结构计算_修改文件 20200114/机动车道/m法桩基承载力计算-桥台/m.txt",
 		"/C/Users/tjad/AppData/Local/Temp/BNZ.5e23b09a43f04bb/序列号(安装前阅读).txt",
 		"/E/BaiduNetdiskDownload/07 【正式版】《桥梁博士V4.1》/Tool/跨网段设置说明.txt",
-		"/C/Users/tjad/Downloads/mathtype6.9+中文版/mathtype 中文版/序列号(安装前阅读).txt"
+		"/C/Users/tjad/Downloads/mathtype6.9+中文版/mathtype 中文版/序列号(安装前阅读).txt",
+		"/E/陈春光/2019年/08 山东菏泽环堤河项目/07 收资-计算文件/计算书/01 整理计算书文件 20200114/J 计算文件/八一西路/01 下部结构计算_修改文件 20200114/机动车道/m法桩基承载力计算-桥墩/m.txt",
+		"/E/陈春光/OneDrive - njtech.edu.cn/work/autolisp/01 test/6domain3.LSP",
+		"/C/Users/tjad/Desktop/103b_A类预应力梁(2018公路规范)-自改/word/document.xml"
 	],
 	"find":
 	{
@@ -643,33 +643,31 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5446,
+						"buffer_size": 4869,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4459,
+								4459
 							]
 						],
 						"settings":
 						{
 							"bs_sintax": "latex",
 							"buffer_scroll_name": "aeddcef3",
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
 							"spell_check": false,
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4530.0,
+						"translation.y": 4778.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -691,16 +689,14 @@
 						"selection":
 						[
 							[
-								269,
-								269
+								191,
+								191
 							]
 						],
 						"settings":
 						{
 							"bs_sintax": "latex",
 							"buffer_scroll_name": "a255ee73",
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
 							"spell_check": false,
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
 							"tab_size": 2,
@@ -710,7 +706,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -744,7 +740,7 @@
 		"cols":
 		[
 			0.0,
-			0.700495049505,
+			0.634077874131,
 			1.0
 		],
 		"rows":
@@ -800,14 +796,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 197.0,
 	"status_bar_visible": true,
 	"template_settings":

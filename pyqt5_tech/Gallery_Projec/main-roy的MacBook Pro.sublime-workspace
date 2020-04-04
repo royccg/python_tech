@@ -4,14 +4,6 @@
 		"selected_items":
 		[
 			[
-				"ind",
-				"\\indent                                           \ttex"
-			],
-			[
-				"qu",
-				"\\qquad                                            \ttex"
-			],
-			[
 				"id",
 				"idLs\tlist ⟠"
 			],
@@ -215,24 +207,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/contents/chp09.tex",
-			"settings":
-			{
-				"buffer_size": 5446,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/JTG3363.tex",
-			"settings":
-			{
-				"buffer_size": 2129,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
@@ -446,19 +420,12 @@
 	},
 	"expanded_folders":
 	[
-		"/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范",
-		"/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/contents"
+		"/E/陈春光/OneDrive - njtech.edu.cn/学习文件/python_tech/pyqt5_tech",
+		"/E/陈春光/OneDrive - njtech.edu.cn/学习文件/python_tech/pyqt5_tech/Gallery_Projec",
+		"/E/陈春光/OneDrive - njtech.edu.cn/学习文件/python_tech/pyqt5_tech/Gallery_Projec/data"
 	],
 	"file_history":
 	[
-		"/C/Users/tjad/Desktop/acad.pgp",
-		"/C/Users/tjad/Desktop/tex_pytex/full example/full_exp.py",
-		"/E/BaiduNetdiskDownload/cad2021zwpj_166379/使用前说明.txt",
-		"/E/陈春光/blog/royccg.github.io/themes/archer/_config.yml",
-		"/E/陈春光/blog/royccg.github.io/source/_posts/【电影】【国漫】哪吒之魔童降世.md",
-		"/E/陈春光/blog/royccg.github.io/themes/archer/layout/_partial/comment/custom.ejs",
-		"/E/陈春光/blog/royccg.github.io/themes/archer/docs/README-en.md",
-		"/E/陈春光/blog/royccg.github.io/_config.yml",
 		"/E/陈春光/OneDrive - njtech.edu.cn/学习文件/python_tech/pyqt5_tech/Gallery_Projec/test.py",
 		"/E/BaiduNetdiskDownload/python人工智能/3、Python基础/第15课-模块和包/代码/第十五课/module1/module1.py",
 		"/E/陈春光/OneDrive - njtech.edu.cn/学习文件/python_tech/pyqt5_tech/Gallery_Projec/MyFunction.py",
@@ -578,7 +545,15 @@
 		"/E/陈春光/2019年/08 山东菏泽环堤河项目/07 收资-计算文件/计算书/01 整理计算书文件 20200114/J 计算文件/八一西路/01 下部结构计算_修改文件 20200114/机动车道/m法桩基承载力计算-桥台/m.txt",
 		"/C/Users/tjad/AppData/Local/Temp/BNZ.5e23b09a43f04bb/序列号(安装前阅读).txt",
 		"/E/BaiduNetdiskDownload/07 【正式版】《桥梁博士V4.1》/Tool/跨网段设置说明.txt",
-		"/C/Users/tjad/Downloads/mathtype6.9+中文版/mathtype 中文版/序列号(安装前阅读).txt"
+		"/C/Users/tjad/Downloads/mathtype6.9+中文版/mathtype 中文版/序列号(安装前阅读).txt",
+		"/E/陈春光/2019年/08 山东菏泽环堤河项目/07 收资-计算文件/计算书/01 整理计算书文件 20200114/J 计算文件/八一西路/01 下部结构计算_修改文件 20200114/机动车道/m法桩基承载力计算-桥墩/m.txt",
+		"/E/陈春光/OneDrive - njtech.edu.cn/work/autolisp/01 test/6domain3.LSP",
+		"/C/Users/tjad/Desktop/103b_A类预应力梁(2018公路规范)-自改/word/document.xml",
+		"/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/test_A3_WENBEN.tex",
+		"/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/project-mode.tex",
+		"/E/陈春光/2019年/08 山东菏泽环堤河项目/08 康庄桥拱桥模型计算/01 康庄路桥计算书及模型_20200106/01 桩基验算/桥台/顺桥向/m.txt",
+		"/C/Users/tjad/Desktop/新建文本文档 (2).txt",
+		"/C/Users/tjad/Downloads/zycadbdzs33/使用说明 .txt"
 	],
 	"find":
 	{
@@ -634,85 +609,13 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/contents/chp09.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5446,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "latex",
-							"buffer_scroll_name": "aeddcef3",
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"spell_check": false,
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4530.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 1,
-					"file": "/E/陈春光/OneDrive - njtech.edu.cn/work/tex_word/JTG 3363—2019公路桥涵地基与基础设计规范/JTG3363.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								269,
-								269
-							]
-						],
-						"settings":
-						{
-							"bs_sintax": "latex",
-							"buffer_scroll_name": "a255ee73",
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"spell_check": false,
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -744,7 +647,7 @@
 		"cols":
 		[
 			0.0,
-			0.700495049505,
+			0.569741414442,
 			1.0
 		],
 		"rows":
@@ -807,8 +710,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 197.0,
+	"side_bar_visible": true,
+	"side_bar_width": 341.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

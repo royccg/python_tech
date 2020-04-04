@@ -40,12 +40,22 @@
     - [滚动条控件](#滚动条控件)
 - [Multithread 多线程完成任务](#multithread-多线程完成任务)
     - [动态显示当前时间](#动态显示当前时间)
+    - [让程序定时关闭](#让程序定时关闭)
+    - [使用线程类（QThread）编写计数器](#使用线程类qthread编写计数器)
+- [web 浏览器控件](#web-浏览器控件)
+    - [用Web浏览器控件（QWebEngineView）显示网页](#用web浏览器控件qwebengineview显示网页)
+    - [显示嵌入页面](#显示嵌入页面)
+    - [PyQt5调用JavaScript代码](#pyqt5调用javascript代码)
+    - [JavaScript调用Python函数计算阶乘](#javascript调用python函数计算阶乘)
+- [布局](#布局)
+  - [水平盒布局（QHBoxLayout）](#水平盒布局qhboxlayout)
+    - [设置控件的对齐方式](#设置控件的对齐方式)
+  - [垂直盒布局](#垂直盒布局)
+  - [](#)
 
 <!-- /code_chunk_output -->
 
-
 # 第3部分学习
-
 ### 对话框：QDiaglog
 + QMessageBox
   - 关于对话框
@@ -243,3 +253,55 @@ self.tableWidget.setContextMenuPolicy(Qt.CustomContextMenu)
 + QThread
 + 多线程：用于同时完成多个任务
 + 每隔一定时间  调动函数
+
+### 让程序定时关闭
++ QTimer.singleShot
+
+
+### 使用线程类（QThread）编写计数器
++ QThread
+
+```python
+def run(self):
+    while True:
+        self.sleep(1)
+        if sec ==5:
+            break
+```
+
++ QLCDNumber
++ 用到自定义信号
+
+# web 浏览器控件
+### 用Web浏览器控件（QWebEngineView）显示网页
++ PyQt5 和Web的交互技术
+    + 同时使用Python 和Web开发程序，混合开发
+    + Python+JavaScript+HTML5+CSS
++ QWebEngineView
+
+### 显示嵌入页面
+
+### PyQt5调用JavaScript代码
++ PyQt5和JavaScript交互
++ 交互
+    + PyQt5 <-> JavaScript互相传递数据
+
+### JavaScript调用Python函数计算阶乘
++  将Python的一个对象映射到JavaScript中
++  将槽函数映射到JavaScript中
+
+
+# 布局
+## 水平盒布局（QHBoxLayout）
+### 设置控件的对齐方式
++ 左对齐
++ 右对齐
++ 上下对齐
+
+## 垂直盒布局
+
+## 设置布局的伸缩量（addStretch）
++ 默认右对齐
++ 伸缩量为0的 先排，其余的控件再排
+
+## 让按钮永远在窗口的右下角
