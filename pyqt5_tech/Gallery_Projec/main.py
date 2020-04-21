@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*- 
+
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -11,7 +13,6 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         super(MyWindow, self).__init__(parent)
         # pyqt5中的界面设置
         self.setupUi(self)
-
         self.initUI()
 
      # add my iniUI
@@ -19,6 +20,11 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         # add statusBar
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
+
+
+        # 设置左边区域的占比
+        
+
         #  read data
         try:
             self.fp = 'data/base_data.json'
@@ -32,24 +38,6 @@ class MyWindow(QMainWindow, Ui_mainWindow):
             self.statusBar.showMessage('Error: 没有找到文件或读取文件失败')
         # else:
         #     self.statusBar.showMessage('读取文件成功', 5000)
-
-        '''
-        # 这些内容需要放入 function中
-        # 设定10行2列
-        # self.imageputtablewidget.setrowcount(10)
-        # self.imageputtablewidget.setcolumncount(2)
-        # # 设定图片的尺寸
-        # self.imageputtablewidget.seticonsize(qsize(250, 200))
-
-        # # 设定单元格的尺寸
-        # for i in range(2):
-        #     self.imageputtablewidget.setcolumnwidth(i, 250)
-        # for i in range(10):
-        #     if i%2 == 0 :
-        #         self.imageputtablewidget.setrowheight(i, 200)
-        #     else:
-        #         self.imageputtablewidget.setrowheight(i, 10)
-        '''
 
         # 隐藏表头
         self.imagePutTableWidget.horizontalHeader().setVisible(False)
@@ -75,6 +63,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         # 添加图片并展示在 中间窗口,待修改
         # imageRow , imageColum = 0,0
         self.savePicturePushButton.clicked.connect( self.saveData)
+        # 添加其他功能
 
     def loadImage(self):
         self.statusBar.showMessage('传入效果图')
@@ -186,7 +175,6 @@ class MyWindow(QMainWindow, Ui_mainWindow):
                     self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1), columnIndex, item)
                     self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1)+1, columnIndex, itemName)
 
-
     def saveData(self):
         '''
         保存当前数据库
@@ -224,15 +212,11 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         except IOError:
             self.statusBar.showMessage('Error: 写入文件失败')
 
-
         # 清空掉 imageInf   imagePut
         self.imageInfTableWidget.setRowCount(0)
         self.imageInfTableWidget.setColumnCount(12)
         self.imagePutTableWidget.setRowCount(0)
         self.imagePutTableWidget.setColumnCount(0)
-
-
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

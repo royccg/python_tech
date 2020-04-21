@@ -210,15 +210,20 @@
          <widget class="QComboBox" name="comboBox">
           <property name="geometry">
            <rect>
-            <x>60</x>
-            <y>70</y>
-            <width>104</width>
-            <height>26</height>
+            <x>20</x>
+            <y>30</y>
+            <width>69</width>
+            <height>22</height>
            </rect>
           </property>
           <item>
            <property name="text">
-            <string>精确收缩</string>
+            <string>桥梁</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>道路</string>
            </property>
           </item>
          </widget>
@@ -235,7 +240,7 @@
      <x>0</x>
      <y>0</y>
      <width>1384</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

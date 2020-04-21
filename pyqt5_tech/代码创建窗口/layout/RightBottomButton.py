@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt
-import sys, math
+import sys
+import math
 
 
 class RightBottomButton(QWidget):
@@ -19,7 +20,7 @@ class RightBottomButton(QWidget):
         hbox.addWidget(cancelButton)
 
         vbox = QVBoxLayout()
-        btn1 =QPushButton('按钮1')
+        btn1 = QPushButton('按钮1')
         btn2 = QPushButton('按钮2')
         btn3 = QPushButton('按钮3')
 
@@ -31,6 +32,7 @@ class RightBottomButton(QWidget):
 
         vbox.addLayout(hbox)
         self.setLayout(vbox)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
