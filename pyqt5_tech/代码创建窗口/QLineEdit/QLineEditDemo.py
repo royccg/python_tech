@@ -3,6 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import Qt
 import sys
 
+
 class QLineEditDemo(QWidget):
     def __init__(self):
         super(QLineEditDemo, self).__init__()
@@ -14,10 +15,10 @@ class QLineEditDemo(QWidget):
         edit1.setValidator(QIntValidator())
         edit1.setMaxLength(4)  # 输入的文字 不超过9999
         edit1.setAlignment(Qt.AlignRight)
-        edit1.setFont(QFont('Arial',20))
+        edit1.setFont(QFont('Arial', 20))
 
         edit2 = QLineEdit()
-        edit2.setValidator(QDoubleValidator(0.99,99.99,2))
+        edit2.setValidator(QDoubleValidator(0.99, 99.99, 2))
 
         edit3 = QLineEdit()
         edit3.setInputMask('99_9999_99999;#')
@@ -34,21 +35,22 @@ class QLineEditDemo(QWidget):
         edit6.setReadOnly(True)
 
         formLayout = QFormLayout()
-        formLayout.addRow("整数校验",edit1)
-        formLayout.addRow('浮点数校验',edit2)
-        formLayout.addRow('Input Mask',edit3)
-        formLayout.addRow('文本变化',edit4)
-        formLayout.addRow('密码',edit5)
-        formLayout.addRow('只读',edit6)
+        formLayout.addRow("整数校验", edit1)
+        formLayout.addRow('浮点数校验', edit2)
+        formLayout.addRow('Input Mask', edit3)
+        formLayout.addRow('文本变化', edit4)
+        formLayout.addRow('密码', edit5)
+        formLayout.addRow('只读', edit6)
 
         self.setLayout(formLayout)
         self.setWindowTitle('QLineEdit综合案例')
 
-    def textChanged(self,text):
+    def textChanged(self, text):
         print('输入的内容' + text)
 
     def enterPress(self):
         print('已输入值')
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

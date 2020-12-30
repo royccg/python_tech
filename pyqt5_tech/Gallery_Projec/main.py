@@ -1,15 +1,19 @@
-# -*- coding: UTF-8 -*- 
+# -*- coding: UTF-8 -*-
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-import sys, os, math
+import sys
+import os
+import math
 from MyFunction import *
 from MainWindowInitUI import Ui_mainWindow
 
 #  set myWindow
+
+
 class MyWindow(QMainWindow, Ui_mainWindow):
-    def __init__(self, parent =None):
+    def __init__(self, parent=None):
         super(MyWindow, self).__init__(parent)
         # pyqt5中的界面设置
         self.setupUi(self)
@@ -21,9 +25,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
 
-
         # 设置左边区域的占比
-        
 
         #  read data
         try:
@@ -47,9 +49,9 @@ class MyWindow(QMainWindow, Ui_mainWindow):
 
         # setting the 2ed tabwiget
         self.imageInfTableWidget.setRowCount(0)
-        self.imageInfTableWidget.setColumnCount(14) # 暂定14行 信息
+        self.imageInfTableWidget.setColumnCount(14)  # 暂定14行 信息
         self.tableHorizontalHeaderLabel = ['id', '项目编号', '项目名称', '文件名', '项目类型', '桥梁类型1', '桥梁类型2',
-        '材料类型', '桥梁风格', '桥梁规模', '桥梁跨径', '建成状态','文件本机地址','文件指向储存地址']
+                                           '材料类型', '桥梁风格', '桥梁规模', '桥梁跨径', '建成状态', '文件本机地址', '文件指向储存地址']
         self.imageInfTableWidget.setHorizontalHeaderLabels(self.tableHorizontalHeaderLabel)
         # self.imageInfTableWidget.setColumnHidden(0, True)   # 隐藏列  id  文件本机地址  指向存储地址
         # self.imageInfTableWidget.setColumnHidden(12, True)
@@ -57,30 +59,30 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.imageInfTableWidget.setShowGrid(True)
 
         # 添加图片并展示在 中间窗口,待修改
-        self.loadImagePushButton.clicked.connect( self.loadImage)
+        self.loadImagePushButton.clicked.connect(self.loadImage)
         # print(data)
 
         # 添加图片并展示在 中间窗口,待修改
         # imageRow , imageColum = 0,0
-        self.savePicturePushButton.clicked.connect( self.saveData)
+        self.savePicturePushButton.clicked.connect(self.saveData)
         # 添加其他功能
 
     def loadImage(self):
         self.statusBar.showMessage('传入效果图')
         # print('press importPicture')
         # fname, _= QFileDialog.getOpenFileName(self, '打开文件', '.', '图像文件(*.jpg *.png )')
-        fnames, _= QFileDialog.getOpenFileNames(self, '打开文件', '.', '图像文件(*.jpg *.png )') # 传入多个文件
+        fnames, _ = QFileDialog.getOpenFileNames(self, '打开文件', '.', '图像文件(*.jpg *.png )')  # 传入多个文件
         # print(type(fnames))  # <class 'list'>
 
         # 首先判断 输入的文件中有没有 文件名和库中文件冲突的
         tempLs = []
         idLs = []
         for i in fnames:
-            id  = creatUuid5(i.split('/')[-1])
+            id = creatUuid5(i.split('/')[-1])
             # print(self.dataDict)
-            if str(id) in self.dataDict :
+            if str(id) in self.dataDict:
                 self.statusBar.showMessage('Error: %s 文件名冲突，或文件已录入' % i.split('/')[-1])
-                QMessageBox.critical(self,'错误','文件名与库中图重复，或文件已录入',QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+                QMessageBox.critical(self, '错误', '文件名与库中图重复，或文件已录入', QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
                 tempLs.append(i)
             else:
                 idLs.append(id)
@@ -99,7 +101,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         tempNum = self.imageInfTableWidget.rowCount()
         imageNowRow = self.imagePutTableWidget.rowCount()   # 可以优化
         try:
-            if tempNum%2 == 0:
+            if tempNum % 2 == 0:
                 signal = 0
             else:
                 signal = 1
@@ -110,39 +112,39 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         #
         if signal == 1:
             import math
-            imageAftRow = math.ceil((imageNowRow/2 -1 +len(fnames))/2)*2
+            imageAftRow = math.ceil((imageNowRow / 2 - 1 + len(fnames)) / 2) * 2
         else:
             import math
-            imageAftRow =  imageNowRow + math.ceil(len(fnames)/2)*2
+            imageAftRow = imageNowRow + math.ceil(len(fnames) / 2) * 2
 
         #  先设置 TableInfWidget内的设置
-        nowInfRow =  self.imageInfTableWidget.rowCount()
-        self.imageInfTableWidget.setRowCount(nowInfRow+len(idLs))
+        nowInfRow = self.imageInfTableWidget.rowCount()
+        self.imageInfTableWidget.setRowCount(nowInfRow + len(idLs))
         for i in range(len(idLs)):
             idItem = QTableWidgetItem(str(idLs[i]))
-            self.imageInfTableWidget.setItem(nowInfRow+i, 0, idItem)
+            self.imageInfTableWidget.setItem(nowInfRow + i, 0, idItem)
             #  提前设置每个 cell的空值，防止后面留空
-            for m in range(len(self.tableHorizontalHeaderLabel)-1):
+            for m in range(len(self.tableHorizontalHeaderLabel) - 1):
                 contextItem = QTableWidgetItem()
-                self.imageInfTableWidget.setItem(nowInfRow+i, m+1, contextItem)
+                self.imageInfTableWidget.setItem(nowInfRow + i, m + 1, contextItem)
 
         # 设置 imagePutWidget
         # 设定 fnameRow 行2列
         self.imagePutTableWidget.setRowCount(imageAftRow)
         self.imagePutTableWidget.setColumnCount(2)
         # 设定图片的尺寸
-        self.imagePutTableWidget.setIconSize(QSize(250, 200))  #尺寸可能后面调动
+        self.imagePutTableWidget.setIconSize(QSize(250, 200))  # 尺寸可能后面调动
         # 设定单元格的尺寸
         for i in range(2):
             self.imagePutTableWidget.setColumnWidth(i, 250)
         for i in range(imageAftRow):
-            if i%2 == 0 :
+            if i % 2 == 0:
                 self.imagePutTableWidget.setRowHeight(i, 200)
             else:
                 self.imagePutTableWidget.setRowHeight(i, 10)
 
         #  设置  待补充
-        if signal != 1 : # 展示框中原来没有图片或  偶数照片
+        if signal != 1:  # 展示框中原来没有图片或  偶数照片
             # item 从头开始
             for i in range(len(fnames)):
                 itemName = QTableWidgetItem(fnames[i].split('/')[-1])
@@ -150,30 +152,30 @@ class MyWindow(QMainWindow, Ui_mainWindow):
                 item = QTableWidgetItem()
                 item.setIcon(QIcon(fnames[i]))
                 item.setTextAlignment(Qt.AlignCenter)
-                if (i+1) %2 == 0:
+                if (i + 1) % 2 == 0:
                     columnIndex = 1
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i)-1, columnIndex, item)
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i), columnIndex, itemName)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i) - 1, columnIndex, item)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i), columnIndex, itemName)
                 else:
-                    columnIndex =0
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1)-1, columnIndex, item)
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1), columnIndex, itemName)
+                    columnIndex = 0
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i + 1) - 1, columnIndex, item)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i + 1), columnIndex, itemName)
 
-        elif signal == 1 :
+        elif signal == 1:
             for i in range(len(fnames)):
                 itemName = QTableWidgetItem(fnames[i].split('/')[-1])
                 itemName.setTextAlignment(Qt.AlignCenter)
                 item = QTableWidgetItem()
                 item.setIcon(QIcon(fnames[i]))
                 item.setTextAlignment(Qt.AlignCenter)
-                if (i+1) %2 != 0:
+                if (i + 1) % 2 != 0:
                     columnIndex = 1
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i), columnIndex, item)
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i)+1, columnIndex, itemName)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i), columnIndex, item)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i) + 1, columnIndex, itemName)
                 else:
-                    columnIndex =0
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1), columnIndex, item)
-                    self.imagePutTableWidget.setItem(imageNowRow+numQue(i+1)+1, columnIndex, itemName)
+                    columnIndex = 0
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i + 1), columnIndex, item)
+                    self.imagePutTableWidget.setItem(imageNowRow + numQue(i + 1) + 1, columnIndex, itemName)
 
     def saveData(self):
         '''
@@ -186,14 +188,15 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         tabelHHLabel = self.tableHorizontalHeaderLabel
         for i in range(tempNum):
             id = self.imageInfTableWidget.item(i, 0).text()
-            dataTemp[ id] ={ }
+            dataTemp[id] = {}
             for j in range(len(tabelHHLabel)):
                 context = self.imageInfTableWidget.item(i, j).text()
-                dataTemp[id][ tabelHHLabel[j]] = context
+                dataTemp[id][tabelHHLabel[j]] = context
                 # pass
         self.dataDict.update(dataTemp)
         dataWrite = self.dataDict
         import json
+
         class NpEncoder(json.JSONEncoder):
             def default(self, obj):
                 if isinstance(obj, np.integer):
@@ -205,8 +208,8 @@ class MyWindow(QMainWindow, Ui_mainWindow):
                 else:
                     return super(NpEncoder, self).default(obj)
         try:
-            jsobj = json.dumps(dataWrite , cls =NpEncoder ,ensure_ascii= False,indent = 4)
-            fileobject = open(self.fp,"w+",encoding= "utf-8")
+            jsobj = json.dumps(dataWrite, cls=NpEncoder, ensure_ascii=False, indent=4)
+            fileobject = open(self.fp, "w+", encoding="utf-8")
             fileobject.write(jsobj)
             fileobject.close()
         except IOError:
@@ -217,6 +220,7 @@ class MyWindow(QMainWindow, Ui_mainWindow):
         self.imageInfTableWidget.setColumnCount(12)
         self.imagePutTableWidget.setRowCount(0)
         self.imagePutTableWidget.setColumnCount(0)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

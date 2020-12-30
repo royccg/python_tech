@@ -1,19 +1,20 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-import sys, math
+import sys
+import math
 
 
 class MultiSignal(QObject):
-    signal1 =pyqtSignal()
-    signal2 =pyqtSignal(int)
-    signal3 =pyqtSignal(int, str)
+    signal1 = pyqtSignal()
+    signal2 = pyqtSignal(int)
+    signal3 = pyqtSignal(int, str)
     signal4 = pyqtSignal(list)
 
     signal5 = pyqtSignal(dict)
     # 声明一个重载版本的信号 [] 代表 或，
     # 槽函数也可以是int和str，也可以只有一个 str类型的参数
-    signal6 = pyqtSignal([int, str],[str])
+    signal6 = pyqtSignal([int, str], [str])
 
     def __init__(self):
         super(MultiSignal, self).__init__()
@@ -29,7 +30,7 @@ class MultiSignal(QObject):
         self.signal2.emit(10)
         self.signal3.emit(1, 'hello world')
         self.signal4.emit([1, 2, 3, 4, 5, 6])
-        self.signal5.emit({'name':'Bill', 'age':30})
+        self.signal5.emit({'name': 'Bill', 'age': 30})
         self.signal6[str].emit('test')
         self.signal6[int, str].emit(100, 'mytest')
 
@@ -53,6 +54,7 @@ class MultiSignal(QObject):
 
     def signalCall6Overload(self, val):
         print('signal6 overload emit, value:', val)
+
 
 if __name__ == "__main__":
     MultiSignal = MultiSignal()
